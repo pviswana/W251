@@ -1,18 +1,4 @@
-# Set up and execution 
-
-## Jetson TX2
-### Network Bridge for local mqtt communication
-* Created a local network bridge using the following command
-  * docker network create --driver bridge w251hw03
-* docker_network_start.sh
-
-### Mosquitto Broker
-* Created a docker image to run the mosquitto broker with alpine and mosquitto using the following docker file
-  * Dockerfile.alpine-mosquitto
-
-### Mosquitto Broker
-
-### Mosquitto Broker
+# Set up and execution process
 
 ## IBM Cloud
 ### VSI
@@ -30,6 +16,21 @@
 
 # 
 
-
 # Links to image files
 * https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/face_image_20200125213800.png
+
+
+
+## Jetson TX2
+### Network Bridge for local mqtt communication
+* Created a local network bridge using the following command
+  * docker network create --driver bridge w251hw03
+* docker_network_start.sh
+
+### Mosquitto Broker
+* Created a docker image to run the mosquitto broker with alpine and mosquitto using the following docker file
+  * Dockerfile.alpine-mosquitto
+
+### Mosquitto Broker
+
+### Mosquitto Broker
