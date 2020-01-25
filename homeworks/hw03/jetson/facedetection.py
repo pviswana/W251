@@ -35,6 +35,7 @@ while(True):
 
     # face detection and other logic goes here
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    #img = cv.imshow('frame', gray)
     print(faces)
     for (x,y,w,h) in faces:
 	# your logic goes here; for instance
@@ -49,15 +50,15 @@ while(True):
 
         local_mqttclient.publish(LOCAL_MQTT_TOPIC, msg, qos=1)
 
-        cv.imshow('img', face)
-        cv.waitKey(10000)
+        #cv.imshow('crop', face)
+        #cv.waitKey(10000)
 
-    cv.destroyAllWindows()
     if face_counter == 5:
     	break
     face_counter = face_counter + 1
 
     time.sleep(1) 
 
-
+cap.release()
+#cv.destroyAllWindows()
 local_mqttclient.loop_stop()
