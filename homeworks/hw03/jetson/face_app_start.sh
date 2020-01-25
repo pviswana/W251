@@ -1,8 +1,10 @@
 #!/bin/bash
 xhost + local:root
 
-docker 	run \
-	--env="DISPLAY" \
+sudo docker 	run \
+	-e DISPLAY=$DISPLAY \
+	--rm \
+	--env QT_X11_NO_MITSHM=1 \
 	--name face_app_jtx2 \
 	--privileged \
 	--network w251hw03 \
