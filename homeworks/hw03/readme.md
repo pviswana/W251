@@ -28,6 +28,8 @@
   * Subscribes to the topic face_app
   * On receiving the file bytes of the images, it saves it to the mounted directory /mnt/hw3bucket
   * The file names were appended with timestamp to make them unique
+  * The image files were now visible on the ibm cloud object store
+  * Made the object store bucket files public so that they are visible using the links below. 
 
 # Links to image files
 * https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/face_image_20200125213800.png
