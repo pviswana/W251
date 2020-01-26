@@ -15,9 +15,12 @@ def on_connect_local(client, userdata, flags, rc):
 	
 def on_message(client,userdata, msg):
   try:
-    current_time = current_milli_time()
+    current_time = time.strftime("%Y%m%d%H%M%S")
+    print('current time', current_time)
+    print('size of payload', msg.payload)
     print("message received!!!" + str(current_time))
-    file_name = '/mnt/w251hw03/face_image_' + str(current_time) + '.png'
+    file_name = '/mnt/hw3bucket/face_image_' + str(current_time) + '.png'
+    #file_name = './face_image_' + str(current_time) + '.png'
     msg_file = open(file_name, 'wb')
     msg_file.write(msg.payload)
     msg_file.close()
