@@ -1,6 +1,4 @@
-#!/bin/bash
-xhost + local:root
-
+xhost local:root
 sudo docker 	run \
 	-e DISPLAY=$DISPLAY \
 	--rm \
@@ -9,4 +7,5 @@ sudo docker 	run \
 	--privileged \
 	--network w251hw03 \
 	-v "$PWD":/HW03 \
+	-v /tmp:/tmp \
 	-ti ubuntu_opencv_mqtt_tx2 bash

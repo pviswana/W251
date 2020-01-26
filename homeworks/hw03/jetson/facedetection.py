@@ -1,4 +1,4 @@
-import numpy as np
+#import numpy as np
 import cv2 as cv
 import paho.mqtt.client as mqtt
 import time
@@ -16,8 +16,8 @@ LOCAL_MQTT_PORT=1883
 LOCAL_MQTT_TOPIC="face_app"
 
 def on_connect_local(client, userdata, flags, rc):
-        print("connected to local broker with rc: " + str(rc))
-        client.subscribe(LOCAL_MQTT_TOPIC)
+    print("connected to local broker with rc: " + str(rc))
+    client.subscribe(LOCAL_MQTT_TOPIC)
 
 local_mqttclient = mqtt.Client()
 local_mqttclient.on_connect = on_connect_local
@@ -35,14 +35,14 @@ while(True):
 
     # face detection and other logic goes here
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-    #img = cv.imshow('frame', gray)
+    img = cv.imshow('frame', gray)
     print(faces)
     for (x,y,w,h) in faces:
 	# your logic goes here; for instance
 	# cut out face from the frame.. 
         face = gray[y:y+h, x:x+w]
-	rc,png = cv.imencode('.png', face)
-	msg = png.tobytes()
+        rc,png = cv.imencode('.png', face)
+        msg = png.tobytes()
         
         msg_file = open('./data_output' + str(face_counter) + '.png', 'wb')
         msg_file.write(msg)
@@ -50,15 +50,16 @@ while(True):
 
         local_mqttclient.publish(LOCAL_MQTT_TOPIC, msg, qos=1)
 
-        #cv.imshow('crop', face)
-        #cv.waitKey(10000)
+        cv.imshow('crop', face)
+        key = cv.waitKey(1000)
+        face_counter = face_counter + 1
 
-    if face_counter == 5:
-    	break
-    face_counter = face_counter + 1
+    # look fpr the escape key on the frame window
+    if key == 27:
+        break
 
     time.sleep(1) 
 
 cap.release()
-#cv.destroyAllWindows()
+cv.destroyAllWindows()
 local_mqttclient.loop_stop()
