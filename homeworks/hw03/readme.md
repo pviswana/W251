@@ -30,10 +30,14 @@
 
 # Links to image files
 * https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/face_image_20200125213800.png
+* https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/face_image_20200125213757.png
 
 
 
 ## Jetson TX2
+### Hardware setup
+* Connected the logitech camera to the usb hub connected to the Jetson TX2
+
 ### Network Bridge for local mqtt communication
 * Created a local network bridge using the following command
   * docker network create --driver bridge w251hw03
@@ -42,7 +46,28 @@
 ### Mosquitto Broker
 * Created a docker image to run the mosquitto broker with alpine and mosquitto using the following docker file
   * Dockerfile.alpine-mosquitto
+* Started a docker container using the network w251hw03 and with other options using the script `mqtt_broker_tx2_start.sh`
 
-### Mosquitto Broker
+### Subscriber and remote publisher
+* Created a docker image from alpine with mosquitto client, paho-mqtt using `Dockerfile.alpine-mqtt-py`
+* Started a docker container using the same network w251hw03 so that we can connect to the local broker 
+  * subscriber_start.sh
+* Started the python program called face_app_subscriber_tx2.py
+  * Subscribes to the local broker for topic `face_app`
+  * Connects to the remote broker running on the cloud
+  * On message receipt it publishes the message to the remote connection 
+  * The QoS = 1 indicates we want to sent the message atleast once
 
-### Mosquitto Broker
+### Face Detection Program
+* Created a docker image from ubuntu with mosquitto client, paho-mqtt, opencv using `Dockerfile.opencv-mqtt`
+* Started a docker container using the same network w251hw03 so that we can connect to the local broker 
+  * face_app_start.sh
+* Started the python program called facedetection.py
+  * Connects to the local broker
+  * Captures image from the camera using opencv
+  * Crops the face from the image
+  * Converts the image to bytes
+  * Sends the converted bytes to the message infrastructure using the topic `face_app`
+  * The QoS = 1 indicates we want to sent the message atleast once
+  * Continues to wait for the next face on the camera and sends the bytes if found
+  * The program quits when the escape key is pressed
