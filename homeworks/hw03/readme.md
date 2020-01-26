@@ -25,7 +25,7 @@
   * All the files from the bucket was now visible in this directory
 * We then started the python program face_app_subscriber_cloud.py within this container
   * Connects to the mqtt broker
-  * Subscribes to the topic face_app
+  * Subscribes to the topic `face_app`
   * On receiving the file bytes of the images, it saves it to the mounted directory /mnt/hw3bucket
   * The file names were appended with timestamp to make them unique
   * The image files were now visible on the ibm cloud object store
