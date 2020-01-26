@@ -10,11 +10,23 @@
 
 ### Mosquitto Broker
 * A docker image named alpine_mosquitto was created from alpine with mosquitto installed
+   * Dockerfile.alpine-mosquitto
 * A docker container was started with the name alpine_mosquitto
 * The mosquitto process was then kicked off within this docker container to act as the broker for this machine
 * We also started the container with the option -p 1883:1883 so that we can have access to the broker from the public ip address
 
-# 
+### Face App subscriber and file saver program
+* A docker image named face-app-ubuntu-mqtt-py was created from the docker file Dockerfile.ubuntu-mqtt-py
+  * This is an ubuntu with paho mqtt installed
+* A docker container was started using this image with the script docker_run_face_app.sh
+  * The docker container was started using the same network config as the mosquitto broker
+* s3fs was installed in the container and the ibm cloud object storage bucket was mounted to /mnt/hw3bucket
+  * All the files from the bucket was now visible in this directory
+* We then started the python program face_app_subscriber_cloud.py within this container
+  * Connects to the mqtt broker
+  * Subscribes to the topic face_app
+  * On receiving the file bytes of the images, it saves it to the mounted directory /mnt/hw3bucket
+  * The file names were appended with timestamp to make them unique
 
 # Links to image files
 * https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/face_image_20200125213800.png
