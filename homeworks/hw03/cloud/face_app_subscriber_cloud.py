@@ -6,9 +6,6 @@ LOCAL_MQTT_HOST="mosquitto"
 LOCAL_MQTT_PORT=1883
 LOCAL_MQTT_TOPIC="face_app"
 
-def current_milli_time():
-    return lambda: int(round(time.time() * 1000))
-
 def on_connect_local(client, userdata, flags, rc):
         print("connected to local broker with rc: " + str(rc))
         client.subscribe(LOCAL_MQTT_TOPIC)
@@ -20,7 +17,6 @@ def on_message(client,userdata, msg):
     print('size of payload', msg.payload)
     print("message received!!!" + str(current_time))
     file_name = '/mnt/hw3bucket/face_image_' + str(current_time) + '.png'
-    #file_name = './face_image_' + str(current_time) + '.png'
     msg_file = open(file_name, 'wb')
     msg_file.write(msg.payload)
     msg_file.close()
