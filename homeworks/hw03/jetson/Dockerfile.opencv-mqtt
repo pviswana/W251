@@ -9,9 +9,18 @@ FROM ubuntu
 
 RUN apt update
 
-ENV DEBIAN_FRONTEND=noninteractive
+ARG URL=http://169.44.201.108:7002/jetpacks/4.3
+ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt install -y python-opencv python-pip vim-tiny mosquitto-clients libopencv-dev
-RUN pip install paho-mqtt
+RUN apt-get update
+RUN apt install -y \
+	python3.6 \
+	python3-pip \
+        python-opencv \
+        python3-opencv \
+        vim-tiny \
+        mosquitto-clients \
+        libopencv-dev
+RUN pip3 install paho-mqtt
 
-WORKDIR /
+WORKDIR /HW03

@@ -33,6 +33,7 @@ while(True):
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
     img = cv.imshow('frame', gray)
     print(faces)
+    key = 0
     for (x,y,w,h) in faces:
 	# your logic goes here; for instance
 	# cut out face from the frame.. 
