@@ -13,6 +13,8 @@ Homework 05
 * There are about 27 high level classes and 21,841 sub classes.
 
 ### Please research and explain the differences between MobileNet and GoogleNet (Inception) architectures.
+* GoogleNet is a pretrained convolutional neural network that is 22 layers deep. You can load a network either trained on ImageNet or Places365 data sets. 
+* MobileNet is an architecture which is more suitable for mobile and embedded based vision applications where there is lack of compute power.
 
 ### In your own words, what is a bottleneck?
 * A bottleneck in a neural network is a layer with less neurons than the layer above or below it. This layer encourages the network to compress feature representations to best fit in the available space, and get the best loss during training.It can be used to obtain a representation of the input with reduced dimensionality.
