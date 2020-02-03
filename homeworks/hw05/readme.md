@@ -18,7 +18,7 @@ Homework 05
 * A bottleneck in a neural network is a layer with less neurons than the layer above or below it. This layer encourages the network to compress feature representations to best fit in the available space, and get the best loss during training.It can be used to obtain a representation of the input with reduced dimensionality.
 
 ### How is a bottleneck different from the concept of layer freezing?
-Layer freezing implies that the layer weights of a trained model are not changed when they are used in a subsequent downstream task. They remain frozen. When backprop is done during training these layer weights are untouched.
+* Layer freezing implies that the layer weights of a trained model are not changed when they are used in a subsequent downstream task. They remain frozen. When backprop is done during training these layer weights are untouched.
 Bottleneck on the other hand is used to reduce the dimensionality of the input during the training process by reducing the number of neurons for that layer.
 
 ### In part one this lab, you trained the last layer (all the previous layers retain their already-trained state). Explain how the lab used the previous layers (where did they come from? how were they used in the process?)
