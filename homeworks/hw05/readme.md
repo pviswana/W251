@@ -1,9 +1,11 @@
 Homework 05
 
 ### What is TensorFlow? Which company is the leading contributor to TensorFlow?
-
+* TensorFlow is an end-to-end open source machine learning platform. Google is the leading contributor to TensorFlow
 
 ### What is TensorRT? How is it different from TensorFlow?
+* TensorRT is an SDK provided by NVIDIA for high performance deep learning inference. It includes a deep learning inference optimizer and runtime that delivers low latency and high-throughput for deep learning inference applications.
+* 
 
 ### What is ImageNet? How many images does it contain? How many classes?
 
