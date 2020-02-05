@@ -30,8 +30,11 @@ Bottleneck on the other hand is used to reduce the dimensionality of the input d
 * Batch size is important since it defines the number of sample images used from the training data during each training step. If the batch size is too low then we could lose the accuracy. If the batch size is too large we could run into memory issues.
 
 ### Find another image classification feature vector from tfhub.dev and rerun the notebook. Which one did you pick and what changes, if any did you need to make?
+* I used the feature vector "https://tfhub.dev/google/tf2-preview/inception_v3/classification/4"
+* It worked and gave the same results but I had to change the image size to [299, 299] since the original model was trained with that size of images.
 
 ### How long did the training take in part 2?
+* The training took a very long time since it was running 50 iterations with the epoch=50 settings.
 
 ### In part 2, you can also specifiy the learning rate using the flag --learning_rate. How does a low --learning_rate (part 2, step 4) value (like 0.001) affect the precision? How much longer does training take?
 
