@@ -24,8 +24,10 @@ Homework 05
 Bottleneck on the other hand is used to reduce the dimensionality of the input during the training process by reducing the number of neurons for that layer.
 
 ### In part one this lab, you trained the last layer (all the previous layers retain their already-trained state). Explain how the lab used the previous layers (where did they come from? how were they used in the process?)
+* We used transfer learning where we can use a model that is pre-trained and then add a layer on top of it using our own training data. We used the pre-trained model as the starting point and assumed all the existing layers from it. We freeze the weights from the pre-existing model and train the model with new layers.
 
 ### Why is the batch size important? What happens if you try running with a batch size of 32? What about a batch size of 4?
+* Batch size is important since it defines the number of sample images used from the training data during each training step. If the batch size is too low then we could lose the accuracy. If the batch size is too large we could run into memory issues.
 
 ### Find another image classification feature vector from tfhub.dev and rerun the notebook. Which one did you pick and what changes, if any did you need to make?
 
