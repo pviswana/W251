@@ -34,7 +34,8 @@ Bottleneck on the other hand is used to reduce the dimensionality of the input d
 * It worked and gave the same results but I had to change the image size to [299, 299] since the original model was trained with that size of images.
 
 ### How long did the training take in part 2?
-* The training took a very long time since it was running 50 iterations with the epoch=50 settings.
+* The training took a very long time since it was running 50 iterations with the epoch=50 settings. It took close to 3 hours to complete the training.
+* loss: 0.5953 - accuracy: 0.9420
 
 ### In part 2, you can also specifiy the learning rate using the flag --learning_rate. How does a low --learning_rate (part 2, step 4) value (like 0.001) affect the precision? How much longer does training take?
 
