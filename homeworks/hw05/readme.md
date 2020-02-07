@@ -40,5 +40,7 @@ Bottleneck on the other hand is used to reduce the dimensionality of the input d
 ### In part 2, you can also specifiy the learning rate using the flag --learning_rate. How does a low --learning_rate (part 2, step 4) value (like 0.001) affect the precision? How much longer does training take?
 
 ### How about a --learning_rate (part 2, step 4) of 1.0? Is the precision still good enough?
+* When the learning rate was set to 1.0 the accuracy dropped to 0.4986
 
 ### For part 2, step 5, How accurate was your model? Were you able to train it using a few images, or did you need a lot?
+* I got an accuracy of 0.9542. I used a nominal set of images not a whole lot.
