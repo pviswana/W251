@@ -5,7 +5,7 @@ https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-s
 https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/face_image_20200224082238.png
 
 ### Describe your solution in detail. What neural network did you use? What dataset was it trained on? What accuracy does it achieve?
-
+We used a pre-trained mobilenet SSD(single shot multibox detector) based face detector with pretrained model provided, powered by tensorflow object detection api, trained by WIDERFACE dataset.
 
 ### Does it achieve reasonable accuracy in your empirical tests? Would you use this solution to develop a robust, production-grade system?
 It seems to achieve reasonable accuracy in the empirical tests. I might add my own layer of training to the pre-trained model and see if I can get better accuracy for a production environment.
