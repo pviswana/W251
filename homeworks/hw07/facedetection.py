@@ -17,7 +17,6 @@ import time
 from tf_trt_models.detection import download_detection_model, build_detection_graph
 
 FROZEN_GRAPH_NAME = 'data/frozen_inference_graph_face.pb'
-IMAGE_PATH = 'data/warriors.jpg'
 
 output_dir=''
 frozen_graph = tf.GraphDef()
