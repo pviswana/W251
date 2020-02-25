@@ -28,7 +28,7 @@ Describe the following augmentations in your own words
 * Translation is used to translate the original image to a different  
 
 ### Noise
-* If the image has a lot of noise and is not clear as the original
+* If the image has a lot of information that is not relevant to the definition of the object, we define it as noise and the image is not clear as the original
 
 ## Part 3
 ### Image annotations require the coordinates of the objects and their classes; in your option, what is needed for an audio annotation?
