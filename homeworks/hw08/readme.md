@@ -25,9 +25,10 @@ Describe the following augmentations in your own words
 * A certain section of the image can be used fo fill the entire image and get the effect of cropping such as a face.
 
 ### Translation
-* Translation
+* Translation is used to translate the original image to a different  
 
 ### Noise
+* If the image has a lot of noise and is not clear as the original
 
 ## Part 3
 ### Image annotations require the coordinates of the objects and their classes; in your option, what is needed for an audio annotation?
