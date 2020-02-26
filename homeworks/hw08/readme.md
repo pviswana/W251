@@ -2,7 +2,7 @@
 
 ## Part 1
 ### In the time allowed, how many images did you annotate?
-* I was able to annotate all the 384 files in about 90 mins. 10 files didn't require labeling so a total of 374 labelled files were created.
+* I was able to annotate all the 384 files in about 90 mins using RectLabel on mac. 10 files didn't require labeling so a total of 374 labelled files were created.
 
 ### Home many instances of the Millennium Falcon did you annotate? How many TIE Fighters?
 * Number of Millennium Falcon = 283
