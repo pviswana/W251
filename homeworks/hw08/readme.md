@@ -10,7 +10,10 @@
 
 ### Think about image augmentation? How would augmentations such as flip, rotation, scale, cropping, and translation effect the annotations?
 * Flip could change the boundaries of x and y depending on how symmetrical the image is
-* Rotation can change the  
+* Rotation can change the orientation and hence the width, height and binding box dimensions can change if the image is not symmetrical. 
+* Scale can reduce or increase the dimensions of the annotated image. Also the binding box dimenstions will change.
+* Cropping will cause the dimensions of the image to change and sometimes may not be labelled if it is too different from the original one
+* Translation depending on the type of translation could change the dimensions or may not be labelled at all.
 
 ## Part 2
 Describe the following augmentations in your own words
@@ -34,3 +37,8 @@ Describe the following augmentations in your own words
 
 ## Part 3
 ### Image annotations require the coordinates of the objects and their classes; in your option, what is needed for an audio annotation?
+* Timeline of audio components that are being labelled
+* Type of audio file being annotated
+* Number of channels
+* Sampling rate of the audio
+* Equalizer settings if applicable
