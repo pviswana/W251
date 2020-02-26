@@ -2,8 +2,11 @@
 
 ## Part 1
 ### In the time allowed, how many images did you annotate?
+* I was able to annotate all the 384 files in about 90 mins. 10 files didn't require labeling so a total of 374 labelled files were created.
 
 ### Home many instances of the Millennium Falcon did you annotate? How many TIE Fighters?
+* Number of Millennium Falcon = 283
+* Number of TIE Fighters = 243
 
 ### Based on this experience, how would you handle the annotation of large image data set?
 * It does take a lot of time to mark each object in an image and label them. For large image data set we should either use crowdsourcing, internal team members or outsource to companies that provide this service.
