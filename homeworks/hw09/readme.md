@@ -23,6 +23,7 @@
 ![Network monitoring](https://github.com/pviswana/W251/blob/master/homeworks/hw09/NetworkMonitoring.png)
 
 ### Take a look at the plot of the learning rate and then check the config file. Can you explan this setting?
+* The learning rate policy has the warmup_steps value set to 8000. So as we can see in the plot for the first 8000 steps it uses a small learning rate value and then starts to use the set value of 2.0 for the learning rate.
 
 ### How big was your training set (mb)? How many training lines did it contain?
 * train.en -> 636.46 mb
