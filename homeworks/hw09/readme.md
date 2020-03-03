@@ -27,9 +27,14 @@
   * of lines = 4562102
 
 ### What are the files that a TF checkpoint is comprised of?
+* Checkpoint data file
+* Index file
+* Meta data file
 
 ### How big is your resulting model checkpoint (mb)?
+* Resulting model checkpoint size = 852.267044 mb
 
 ### Remember the definition of a "step". How long did an average step take?
+* Avg time per step: 1.798s
 
 ### How does that correlate with the observed network utilization between nodes?
