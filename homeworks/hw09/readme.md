@@ -24,7 +24,7 @@
   * Number of lines = 4562102
 
 * train.de -> 710.264445 mb
-  * of lines = 4562102
+  * Number of lines = 4562102
 
 ### What are the files that a TF checkpoint is comprised of?
 * Checkpoint data file
