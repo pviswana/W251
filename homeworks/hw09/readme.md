@@ -14,6 +14,8 @@
 ![GPU Utilization](https://github.com/pviswana/W251/blob/master/homeworks/hw09/GPUUsage.png)
 
 ### Did you monitor network traffic (hint: apt install nmon ) ? Was network the bottleneck?
+* I did monitor network traffic
+![Network monitoring](https://github.com/pviswana/W251/blob/master/homeworks/hw09/NetworkMonitoring.png)
 
 ### Take a look at the plot of the learning rate and then check the config file. Can you explan this setting?
 
