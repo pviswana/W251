@@ -9,6 +9,9 @@
 * Based on the 
 
 ### Were your GPUs fully utilized?
+* The GPUs were 100% utilized as seen below
+
+![GPU Utilization](https://github.com/pviswana/W251/blob/master/homeworks/hw09/GPUUsage.png)
 
 ### Did you monitor network traffic (hint: apt install nmon ) ? Was network the bottleneck?
 
