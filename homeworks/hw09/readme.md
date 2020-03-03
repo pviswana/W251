@@ -25,10 +25,10 @@
 ### Take a look at the plot of the learning rate and then check the config file. Can you explan this setting?
 
 ### How big was your training set (mb)? How many training lines did it contain?
-* train.en -> 636.464546 mb
+* train.en -> 636.46 mb
   * Number of lines = 4562102
 
-* train.de -> 710.264445 mb
+* train.de -> 710.26 mb
   * Number of lines = 4562102
 
 ### What are the files that a TF checkpoint is comprised of?
@@ -37,7 +37,7 @@
 * Meta data file
 
 ### How big is your resulting model checkpoint (mb)?
-* Resulting model checkpoint size = 852.267044 mb
+* Resulting model checkpoint size = 852.27 mb
 
 ### Remember the definition of a "step". How long did an average step take?
 * Avg time per step: 1.798s
