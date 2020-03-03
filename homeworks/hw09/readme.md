@@ -1,8 +1,13 @@
+### TensorBoard output
+
+![TensorBoard Output](https://github.com/pviswana/W251/blob/master/homeworks/hw09/TensorBoardOutput.png)
+
+
 ### How long does it take to complete the training run? (hint: this session is on distributed training, so it will take a while)
 * It took 25 hours to complete the training run with max steps = 50K
 
 ### Do you think your model is fully trained? How can you tell?
-* I don't think the model was fully trained. 
+* The training did completed the max steps of 50K, but I think the model could be further trained to reduce the loss. 
 * The loss function was not fully converged, so there was more room for improvement.
 
 ### Were you overfitting?
