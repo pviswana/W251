@@ -11,7 +11,7 @@
 * The loss function was not fully converged, so there was more room for improvement.
 
 ### Were you overfitting?
-* Based on the 
+* Based on the graphs it doesn't look like we are overfitting yet. It is possible that if we run the training model for more number of steps the loss may reduce more and possibly cause overfitting.
 
 ### Were your GPUs fully utilized?
 * The GPUs were 100% utilized as seen below
