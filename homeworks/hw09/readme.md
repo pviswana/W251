@@ -43,7 +43,7 @@
 * Resulting model checkpoint size = 852.27 mb
 
 ### Remember the definition of a "step". How long did an average step take?
-* Time taken to execute a batch of the training data
+* Execution of a batch of the training data
 * Avg time per step: 1.798s
 
 ### How does that correlate with the observed network utilization between nodes?
