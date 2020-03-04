@@ -11,7 +11,7 @@
 * The loss function was not fully converged, so there was more room for improvement.
 
 ### Were you overfitting?
-* Based on the graphs it doesn't look like we are overfitting yet. It is possible that if we run the training model for more number of steps the loss may reduce more and possibly cause overfitting.
+* Based on the graphs it doesn't look like we are overfitting yet. The eval loss and training loss looked very similar to each other indicating that we did not overfit the model.
 
 ### Were your GPUs fully utilized?
 * The GPUs were 100% utilized as seen below
@@ -21,6 +21,8 @@
 ### Did you monitor network traffic (hint: apt install nmon ) ? Was network the bottleneck?
 * I did monitor network traffic
 ![Network monitoring](https://github.com/pviswana/W251/blob/master/homeworks/hw09/NetworkMonitoring.png)
+
+* The network seems to be a bottleneck because if I decreased the total number of GPUs to 1 on each VM the send and receive data size was still the same on the network indicating that it is throttling the traffic that needs to be send across the network from one node to another.
 
 ### Take a look at the plot of the learning rate and then check the config file. Can you explan this setting?
 * The learning rate policy has the warmup_steps value set to 8000. So as we can see in the plot for the first 8000 steps it uses a small learning rate value and then starts to use the set value of 2.0 for the learning rate.
@@ -44,3 +46,4 @@
 * Avg time per step: 1.798s
 
 ### How does that correlate with the observed network utilization between nodes?
+* The average time per step seems to increase for lower bandwidth of the network and decrease if the bandwidth is increased. So it is inversely proportional to the network bandwidth. 
