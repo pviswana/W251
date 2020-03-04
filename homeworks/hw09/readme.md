@@ -7,7 +7,7 @@
 * It took 25 hours to complete the training run with max steps = 50K
 
 ### Do you think your model is fully trained? How can you tell?
-* The training did completed the max steps of 50K, but I think the model could be further trained to reduce the loss. 
+* The training did complete the max steps of 50K, but I think the model could be further trained to reduce the loss. 
 * The loss function was not fully converged, so there was more room for improvement.
 
 ### Were you overfitting?
