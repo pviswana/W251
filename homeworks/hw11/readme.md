@@ -52,7 +52,7 @@ On the other hand `relu` function
 * **Number of hidden layers = 2**
 * Number of neurons in input layer = 32
 * Number of neurons in hidden layers = 16
-* Loss method = mean_squared_erro
+* Loss method = mean_squared_error
 
 * The changes from the above configuration was that a second hidden layer was added to see if the model can be trained better.
 
@@ -73,7 +73,7 @@ On the other hand `relu` function
 * **Number of hidden layers = 2**
 * Number of neurons in input layer = 32
 * Number of neurons in hidden layers = 16
-* Loss method = mean_squared_erro
+* Loss method = mean_squared_error
 
 * The changes from the above configuration was that the optimizer was modified from `adam` to `adamax`
 
@@ -82,3 +82,11 @@ On the other hand `relu` function
 
 * Sample Video
 * https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/adamax_video.mp4
+
+
+## Other possible configuration changes that I would have liked to try
+* Try different loss functions such as `Log Loss` but for regression `mean_squared_error` is optimal
+* Try different epochs to see if we are overfitting or underfitting
+* Try different batch sizes to see can improve the speed of training
+
+* Overall I found this a very iterative process since to see the impact of a change you can modify only one parameter at a time and then run the entire process which takes about 12hours.
