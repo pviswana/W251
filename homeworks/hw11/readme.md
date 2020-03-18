@@ -54,10 +54,11 @@ On the other hand `relu` function
 * Number of neurons in hidden layers = 16
 * Loss method = mean_squared_error
 
-* The changes from the above configuration was that a second hidden layer was added to see if the model can be trained better.
+The changes from the above configuration was that a second hidden layer was added to see if the model can be trained better.
 
-* I expected that with more hidden layers the model with train better and take longer. It did take longer compared to the above configuration and the results were marginally better.
-* Multiple hidden layers helps to make the model more generalized so for an unknown test data we have better chance of predicting it correctly.
+I expected that with more hidden layers the model with train better and take longer. It did take longer compared to the above configuration and the results were marginally better.
+
+Multiple hidden layers helps to make the model more generalized so for an unknown test data we have better chance of predicting it correctly.
 
 * Sample Video
 * https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/relu_2_layers_video.mp4
@@ -75,10 +76,10 @@ On the other hand `relu` function
 * Number of neurons in hidden layers = 16
 * Loss method = mean_squared_error
 
-* The changes from the above configuration was that the optimizer was modified from `adam` to `adamax`
+The changes from the above configuration was that the optimizer was modified from `adam` to `adamax`
 
-* `Adamax` is a special case of `adam` where the second order moment is replaced by infinite order moment which is supposed to make the algorithm more stable. It is influenced by fewer gradients and hence is more robust to noise in the gradients.
-* However the results didn't show much improvement for the current training model.
+`Adamax` is a special case of `adam` where the second order moment is replaced by infinite order moment which is supposed to make the algorithm more stable. It is influenced by fewer gradients and hence is more robust to noise in the gradients.
+However the results didn't show much improvement for the current training model.
 
 * Sample Video
 * https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/adamax_video.mp4
