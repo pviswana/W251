@@ -1,4 +1,4 @@
-## Configurations
+## The following are the 4 configurations that I was able to try
 
 ### Baseline Configuration
 * Threshold = 3000
@@ -61,3 +61,24 @@ On the other hand `relu` function
 
 * Sample Video
 * https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/relu_2_layers_video.mp4
+
+
+### Configuration as above + `adamax` as the optimizer instead of `adam`
+* Threshold = 3000
+* Number of iterations = 50000
+* Batch Size = 20
+* Epochs = 10 
+* **Optimizer = adamax**
+* **Hidden Layer Activation = relu**
+* **Number of hidden layers = 2**
+* Number of neurons in input layer = 32
+* Number of neurons in hidden layers = 16
+* Loss method = mean_squared_erro
+
+* The changes from the above configuration was that the optimizer was modified from `adam` to `adamax`
+
+* `Adamax` is a special case of `adam` where the second order moment is replaced by infinite order moment which is supposed to make the algorithm more stable. It is influenced by fewer gradients and hence is more robust to noise in the gradients.
+* However the results didn't show much improvement for the current training model.
+
+* Sample Video
+* https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/adamax_video.mp4
