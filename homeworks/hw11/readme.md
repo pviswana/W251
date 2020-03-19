@@ -12,6 +12,8 @@
 * Number of neurons in hidden layers = 16
 * Loss method = mean_squared_error
 
+* **Successful Landings = 61**
+
 * With the baseline configuration shown above the processing was slow and the accuracy of landing was not good
 * Sample video
 https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/basic_config_video.mp4
@@ -37,7 +39,9 @@ On the other hand `relu` function
   
 `ReLu`is more efficient since it outputs 0 for negative values of x which implies fewer neurons are firing and the network is lighter (hence faster). `ReLu` also doesn't have the vanishing gradient problem since during back propagation it doesn't pass gradients that are getting smaller and smaller instead they stay the same.
 
-* I expected better results with `relu` but the results were just marginally better
+* I expected better results with `relu` but didn't see that
+
+* **Successful Landings = 58**
 
 * Sample Video
 * https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/relu_video.mp4
@@ -80,6 +84,8 @@ The changes from the above configuration was that the optimizer was modified fro
 
 `Adamax` is a special case of `adam` where the second order moment is replaced by infinite order moment which is supposed to make the algorithm more stable. It is influenced by fewer gradients and hence is more robust to noise in the gradients.
 However the results didn't show much improvement for the current training model.
+
+*  **Successful Landings = 64**
 
 * Sample Video
 * https://w251-cloud-object-storage-j3-cos-standard-0js.s3.us-south.cloud-object-storage.appdomain.cloud/adamax_video.mp4
