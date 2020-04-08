@@ -8,6 +8,7 @@
 
 **How much disk space is used after step 4?**
 * The disk space used by AUS-gutemberg was 938M. Will update with the space requirements for reddit once the process completes.
+* The disk space used by the Reddit data set is at 2GB so far.
 
 **Did you parallelize the crawlers in step 4? If so, how?**
 * The files are marked with the year and month so I split the files into different directories based on the year 2007 to 2018 and then ran one crawler instance per year. Each crawker will handle only one year of data. I could even split it to one per month and have more parallel processing done.
