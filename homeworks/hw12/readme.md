@@ -17,6 +17,8 @@
 * One way to de-dupe is to make sure that the files have less than threshold n-gram overlapping with the current dataset
 
 **Submit the list of files you that your LazyNLP spiders crawled (ls -la).**
-* Here is the list of the files from the AUS-gutemberg. I will update the list with the reddit files once the process completes.
-
+* Here is the list of the files from the AUS-gutemberg. 
 ![File list for AUS_Gutemberg dataset](aus_file_list.txt)
+
+* Reddit file list
+![Reddit file list](reddit_files_list.txt)
